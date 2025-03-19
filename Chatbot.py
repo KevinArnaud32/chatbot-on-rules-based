@@ -20,5 +20,5 @@ while True:
     if user_sms != "quit":
         print("chat:",chatbotRespons(user_sms.lower()))
     else:
-        print("A bientôt !")
+        print("chat:", chatbotRespons(user_sms.lower()))
         break
