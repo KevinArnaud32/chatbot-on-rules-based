@@ -6,7 +6,6 @@ def chatbotRespons(user_input):
     responses = {
         "bonjour": random.choice(responsesListe.greetings),
         "comment ça va ?": random.choice(responsesListe.take_news),
-        "J'ai besoin d'aide": "",
         "il fait quelle heure ?": random.choice(responsesListe.reponses_heure),
         "quit": "A bientôt",
     }
