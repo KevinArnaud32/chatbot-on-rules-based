@@ -6,19 +6,20 @@ def chatbotRespons(user_input):
     responses = {
         "bonjour": random.choice(responsesListe.greetings),
         "comment ça va ?": random.choice(responsesListe.take_news),
-        "a bientôt": "A plus",
-        "quit": "A bientôt"
+        "J'ai besoin d'aide": "",
+        "il fait quelle heure ?": random.choice(responsesListe.reponses_heure),
+        "quit": "A bientôt",
     }
     return responses.get(user_input)
 
 
 
-# Communication avec le ChatBot
+# Communication chatbot - user
 while True:
     user_sms = input("Vous: ")
 
-    if user_sms != "quit":
-        print("chat:",chatbotRespons(user_sms.lower()))
+    if user_sms.lower() != "quit":
+        print("chat:",chatbotRespons(user_sms.lower().strip()))
     else:
-        print("chat:", chatbotRespons(user_sms.lower()))
+        print("chat:", chatbotRespons(user_sms.lower().strip()))
         break
